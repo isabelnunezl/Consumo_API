@@ -46,6 +46,7 @@ class Main:
                             current_page -= 1
                         elif command == 'g':
                             self.file_manager.save_to_json(data, f'{category}_meals.json')
+                            self.file_manager.save_to_csv(data, f'{category}_meals.csv')
                             print("Datos guardados.")
                         elif command == 'q':
                             print("Saliendo.")
