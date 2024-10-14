@@ -17,7 +17,7 @@ class FileManager:
             with open(filename, 'w', encoding='utf-8') as file:
                 writer = csv.DictWriter(file, fieldnames=data[0].keys())
                 writer.writeheader()
-                writer.writerow(data)
+                writer.writerows(data)
             print(f"Datos guardados en {filename} (CSV)")
         except Exception as e:
             print(f"Error al guardar los datos en {filename}: {e}")
